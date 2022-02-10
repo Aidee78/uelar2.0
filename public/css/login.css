@@ -1,0 +1,165 @@
+*{
+    outline: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    text-decoration: none;
+    text-overflow: ellipsis;
+}
+html::-webkit-scrollbar, *::-webkit-scrollbar{
+    width: 5px;
+}
+html::-webkit-scrollbar-thumb, *::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: linear-gradient(180deg, transparent, #494949);
+    cursor: pointer;
+}
+html::-webkit-scrollbar-track, *::-webkit-scrollbar-track{
+    background-color: #e0e0e0;
+}
+html, *{
+    scrollbar-width: thin;
+    scrollbar-color: #eba35baa #e0e0e0;
+}
+
+html{
+    font-size: 100%;
+}
+@media screen and (max-width: 360px){
+    html{
+        font-size: 15px !important;
+    }
+}
+@media screen and (max-width: 320px){
+    html{
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 280px){
+    html{
+        font-size: 13px !important;
+    }
+}
+@media screen and (max-width: 240px){
+    html{
+        font-size: 12px !important;
+    }
+}
+@media screen and (max-width: 200px){
+    html{
+        font-size: 11px !important;
+    }
+}
+@media screen and (max-width: 180px){
+    html{
+        font-size: 10px !important;
+    }
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+main{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #0d1424;
+    width: 100%;
+    min-height: 100vh;
+}
+.sign_in_form{
+    display: block;
+    height: 100%;
+}
+.sign_in_form h1{
+    color: #2cb0e3;
+    color: #e3ad2c;
+    font-size: 3rem;
+}
+.sign_in_form small{
+    color: #eee;
+}
+.sign_in_form .form_section{
+    display: block;
+    padding: 1.5rem;
+}
+.sign_in_form .form-field{
+    display: block;
+    margin: 1rem auto;
+}
+form .form-field label, form .form-field  input, form .form-field  a{
+    display: block;
+}
+form .form-field label{
+    text-align: left;
+    color: #cecece;
+    background-color: #0b111b;
+    padding: .5rem;
+    margin-bottom: .1rem;
+    border-radius: .5rem;
+    width: 100%;
+}
+form .form-field input{
+    display: block;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: .5rem;
+    padding: .5rem;
+    background-color: #060911;
+    color: #eee;
+    margin: .2rem auto;
+}
+form .form-field  a{
+    display: block;
+    text-align: right;
+    color: #eee;
+}
+.actions_sec input[type='checkbox']{
+    display: inline-block;
+}
+.actions_sec label{
+    display: inline-block;
+    color: #eee;
+}
+.actions_sec button{
+    display: block;
+    background-color: #2cb0e3;
+    background-color: #e3ad2c;
+    border: 0;
+    padding: .5rem 3rem;
+    border-radius: 100px;
+    margin: .5rem auto;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #0b111b;
+    box-shadow: 0 0 2px #00000081
+}
+.actions_sec button:hover{
+    box-shadow: 0 0 5px #000000d8;
+}
+.actions_sec a{
+    display: block;
+    color: #eee;
+    text-align: center;
+}
+@media screen and (min-width: 650px){
+    .sign_in_form{
+        display: block;
+        height: 100%;
+        width: 650px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,21 @@
+:root {
+    --body-bg-color:#f3f3f3;
+    --sideBar-bg-color:#ffffff;
+    --sideBar-header-bg-color:#030b1a;
+    --sideBar-pri-color: #000000;
+    --header-bg-color: #ffffff;
+    --unloaded: #a5a5a5;
+    --header-pri-color: #030b1a;
+    --header-links-active:#cc6e11;
+    --searchBar-bg-color: #ffffff;
+    --searchBar-pri-color: #000000;
+    --searchBar-sec-color: #030b1a;
+    --searchBar-pri-link: #445bd9;
+    --search-result-bg: #ffffff;
+}
+
+[data-theme="theme2"] {
+    --body-bg-color:#e6e6e6;
+    --sideBar-bg-color:#030b1a;
+    --body-bg-color:#030b1a;
+}

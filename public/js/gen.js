@@ -1,0 +1,11 @@
+const mainBody = document.querySelector('html body');
+const pageMain = document.querySelector('main#page-main-body');
+const sidebar_toggle = document.querySelector('#sidebar-toggle');
+const sidebar = document.querySelector('body>aside.sidebar');
+const searchbar_toggle = document.querySelector('#searchbar-toggle');
+const searchbar = document.querySelector('body>aside.searchBar');
+const theme1_inp = document.querySelector('#theme1');
+const theme2_inp = document.querySelector('#theme2');
+const toggle1 = document.querySelector('.theme-toggle1');
+const toggle2 = document.querySelector('.theme-toggle2');
+const cover = document.querySelector('#cover');

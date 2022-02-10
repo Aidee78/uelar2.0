@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/site/favicon.png" type="image/x-icon">
+    <title>Uelar | Real Estate Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        @keyframes loading {
+            0% {
+                bottom: 80%;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            95% {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            100% {
+                bottom: 0;
+                width: 2.2rem;
+                height: 1.8rem;
+            }
+        }
+
+        .cover {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100vw;
+            max-width: 100vw;
+            min-height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10005;
+            background-color: #fff;
+        }
+
+        .loading-cont {
+            display: flex;
+            flex-direction: column;
+            min-height: 20vh;
+            max-height: 20rem;
+        }
+
+        .loading-cont div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            flex: 1 1 auto;
+            position: relative;
+        }
+
+        .loading-cont div span {
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            content: "";
+            background-color: #ffb74f;
+            border: 1px solid #db8812;
+            border-radius: 1000px;
+            position: absolute;
+            animation-name: loading;
+            animation-duration: .75s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .loading-cont p {
+            display: block;
+            margin-top: auto;
+            justify-self: flex-end;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 2px;
+            padding: .2rem;
+            color: #030b1a;
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/fonts/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/listings.css">
+</head>
+
+<body>
+    <section class="cover" id="cover">
+        <div class="loading-cont">
+            <div><span></span></div>
+            <p>...Loading...</p>
+        </div>
+    </section>
+    <header>
+        <section>
+            <label for="sidebar-toggle" class="fa fa-navicon">
+                <span></span>
+                <input type="checkbox" name="sidebarToggle" id="sidebar-toggle" autocomplete="off">
+            </label>
+
+            <div class="brand-name-cont">
+                <a href="./" class="brand-name">
+                    <div class="uelar-logo">
+                        <img src="../assets/images/site/favicon.png" alt="Uelar logo">
+                    </div>
+                    Uelar
+                </a>
+            </div>
+
+            <div class="search-btn-cont">
+                <a href="#search.html" class="search-btn">
+                    <label for="searchbar-toggle" class="fa fa-search">
+                        <input type="checkbox" name="searchbarToggle" id="searchbar-toggle" autocomplete="off">
+                    </label>
+                </a>
+            </div>
+
+
+            <div class="profile-img">
+                <a href="admin/index.html">
+                    <img src="../assets/images/letters/ii1.png" alt=" My profile image">
+                </a>
+            </div>
+        </section>
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fa fa-fire"></i> <span>Hot</span></a></li>
+                    <li><a href="listings.html"><i class="fa fa-building"></i> <span>Apartments</span></a></li>
+                    <li><a href="listings.html"><i class="fa fa-home"></i> <span>Homes</span></a></li>
+                    <li><a href="listings.html"><i class="fa fa-laptop"></i> <span>Offices</span></a></li>
+                    <li><a href="listings.html"><i class="fa fa-shield"></i> <span>Self-cons</span></a></li>
+                    <li><a href="listings.html" class="active"><i class="fa fa-shopping-bag"></i> <span>Shops</span></a>
+                    </li>
+                    <li><a href="listings.html"><i class="fa fa-graduation-cap"></i> <span>Students</span></a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main id="page-main-body">
+        <main>
+            <section class="listings-container">
+                <ul>
+                    <li class="listing">
+                        <div class="img-container">
+                            <a href="property.html">
+                                <img src="../assets/images/listings/l6.jpg" alt="">
+                                <p class="price">&#8358;670,000</p>
+                                <p href="" class="type">For rent</p>
+                            </a>
+                        </div>
+                        <div class="details-layer">
+                            <form action="" method="get">
+                                <input type="hidden" name="property_id" value="1">
+                                <button type="submit"><i
+                                        class="fa fa-heart"></i><span>21,302</span><span>likes</span></button>
+                            </form>
+                            <i class="fas fa-ellipsis-v menu-btn"></i>
+                        </div>
+                        <div class="details-layer">
+                            <span><i class="fa fa-bed"></i>3 beds</span>
+                            <span><i class="fa fa-bathtub"></i>3 bathrooms</span>
+                            <span><i class="fa fa-square"></i>1203 sqft</span>
+                        </div>
+                        <div class="details-layer">
+                            <p class="address">1 Regina Udobong <a href="">, Uyo</a></p>
+                        </div>
+                        <div class="details-layer">
+                            <img src="../assets/images/profile/agent1.jpg" alt="Mr. Joe Dohn (agent) profile img"
+                                class="agent-profle-img">
+                            <div>
+                                <a href="profile.html">Mr. John Doe</a>
+                                <p>Selling Agent</p>
+                            </div>
+
+                        </div>
+                        <!-- <div class="listing-menu">
+                            <a href="">Report fraud</a>
+                            <a href="">Save property</a>
+                        </div> -->
+                    </li>
+                    <li class="listing">
+                        <div class="img-container">
+                            <a href="property.html">
+                                <img src="../assets/images/listings/l14.jpg" alt="">
+                                <p class="price">&#8358;15,000,000</p>
+                                <p href="" class="type">For sale</p>
+                            </a>
+                        </div>
+                        <div class="details-layer">
+                            <form action="" method="get">
+                                <input type="hidden" name="property_id" value="1">
+                                <button type="submit"><i
+                                        class="fa fa-heart-o"></i><span>3,249</span><span>likes</span></button>
+                            </form>
+                            <i class="fas fa-ellipsis-v menu-btn"></i>
+                        </div>
+                        <div class="details-layer">
+                            <span><i class="fa fa-bed"></i>3 beds</span>
+                            <span><i class="fa fa-bathtub"></i>3 bathrooms</span>
+                            <span><i class="fa fa-square"></i>1203 sqft</span>
+                        </div>
+                        <div class="details-layer">
+                            <p class="address">1 Regina Udobong <a href="">, Uyo</a></p>
+                        </div>
+                        <div class="details-layer">
+                            <img src="../assets/images/profile/agent2.jpg" alt="Mr. Joe Dohn (agent) profile img"
+                                class="agent-profle-img">
+                            <div>
+                                <a href="profile.html">Mr. John Doe</a>
+                                <p>Selling Agent</p>
+                            </div>
+
+                        </div>
+                        <!-- <div class="listing-menu">
+                                                <a href="">Report fraud</a>
+                                                <a href="">Save property</a>
+                                            </div> -->
+                    </li>
+                    <li class="listing">
+                        <div class="img-container">
+                            <a href="property.html">
+                                <img src="../assets/images/listings/l8.jpg" alt="">
+                                <p class="price">&#8358;25,000,000</p>
+                                <p href="" class="type">For sale</p>
+                            </a>
+                        </div>
+                        <div class="details-layer">
+                            <form action="" method="get">
+                                <input type="hidden" name="property_id" value="1">
+                                <button type="submit"><i
+                                        class="fa fa-heart"></i><span>91,372</span><span>likes</span></button>
+                            </form>
+                            <i class="fas fa-ellipsis-v menu-btn"></i>
+                        </div>
+                        <div class="details-layer">
+                            <span><i class="fa fa-bed"></i>3 beds</span>
+                            <span><i class="fa fa-bathtub"></i>3 bathrooms</span>
+                            <span><i class="fa fa-square"></i>1203 sqft</span>
+                        </div>
+                        <div class="details-layer">
+                            <p class="address">1 Regina Udobong <a href="">, Uyo</a></p>
+                        </div>
+                        <div class="details-layer">
+                            <img src="../assets/images/profile/agent1.jpg" alt="Mr. Joe Dohn (agent) profile img"
+                                class="agent-profle-img">
+                            <div>
+                                <a href="profile.html">Mr. John Doe</a>
+                                <p>Selling Agent</p>
+                            </div>
+
+                        </div>
+                        <!-- <div class="listing-menu">
+                                                <a href="">Report fraud</a>
+                                                <a href="">Save property</a>
+                                            </div> -->
+                    </li>
+                    <li class="listing">
+                        <div class="img-container">
+                            <a href="property.html">
+                                <img src="../assets/images/listings/l4.jpg" alt="">
+                                <p class="price">&#8358;76,000,000</p>
+                                <p href="" class="type">For sale</p>
+                            </a>
+                        </div>
+                        <div class="details-layer">
+                            <form action="" method="get">
+                                <input type="hidden" name="property_id" value="1">
+                                <button type="submit"><i
+                                        class="fa fa-heart-o"></i><span>11,352</span><span>likes</span></button>
+                            </form>
+                            <i class="fas fa-ellipsis-v menu-btn"></i>
+                        </div>
+                        <div class="details-layer">
+                            <span><i class="fa fa-bed"></i>3 beds</span>
+                            <span><i class="fa fa-bathtub"></i>3 bathrooms</span>
+                            <span><i class="fa fa-square"></i>1203 sqft</span>
+                        </div>
+                        <div class="details-layer">
+                            <p class="address">1 Regina Udobong <a href="">, Uyo</a></p>
+                        </div>
+                        <div class="details-layer">
+                            <img src="../assets/images/profile/agent2.jpg" alt="Mr. Joe Dohn (agent) profile img"
+                                class="agent-profle-img">
+                            <div>
+                                <a href="profile.html">Mr. John Doe</a>
+                                <p>Selling Agent</p>
+                            </div>
+
+                        </div>
+                        <!-- <div class="listing-menu">
+                                                <a href="">Report fraud</a>
+                                                <a href="">Save property</a>
+                                            </div> -->
+                    </li>
+                    <li class="listing">
+                        <div class="img-container">
+                            <a href="property.html">
+                                <img src="../assets/images/listings/l17.jpg" alt="">
+                                <p class="price">&#8358;372,000,000</p>
+                                <p href="" class="type">For sale</p>
+                            </a>
+                        </div>
+                        <div class="details-layer">
+                            <form action="" method="get">
+                                <input type="hidden" name="property_id" value="1">
+                                <button type="submit"><i
+                                        class="fa fa-heart"></i><span>261,074</span><span>likes</span></button>
+                            </form>
+                            <i class="fas fa-ellipsis-v menu-btn"></i>
+                        </div>
+                        <div class="details-layer">
+                            <span><i class="fa fa-bed"></i>3 beds</span>
+                            <span><i class="fa fa-bathtub"></i>3 bathrooms</span>
+                            <span><i class="fa fa-square"></i>1203 sqft</span>
+                        </div>
+                        <div class="details-layer">
+                            <p class="address">1 Regina Udobong <a href="">, Uyo</a></p>
+                        </div>
+                        <div class="details-layer">
+                            <img src="../assets/images/profile/agent3.jpg" alt="Mr. Joe Dohn (agent) profile img"
+                                class="agent-profle-img">
+                            <div>
+                                <a href="profile.html">Mr. John Doe</a>
+                                <p>Selling Agent</p>
+                            </div>
+
+                        </div>
+                        <!-- <div class="listing-menu">
+                                                <a href="">Report fraud</a>
+                                                <a href="">Save property</a>
+                                            </div> -->
+                    </li>
+                    <li class="listing">
+                        <div class="img-container">
+                            <a href="property.html">
+                                <img src="../assets/images/listings/l5.jpg" alt="">
+                                <p class="price">&#8358;47,500,000</p>
+                                <p href="" class="type">For sale</p>
+                            </a>
+                        </div>
+                        <div class="details-layer">
+                            <form action="" method="get">
+                                <input type="hidden" name="property_id" value="1">
+                                <button type="submit"><i
+                                        class="fa fa-heart-o"></i><span>1,095</span><span>likes</span></button>
+                            </form>
+                            <i class="fas fa-ellipsis-v menu-btn"></i>
+                        </div>
+                        <div class="details-layer">
+                            <span><i class="fa fa-bed"></i>3 beds</span>
+                            <span><i class="fa fa-bathtub"></i>3 bathrooms</span>
+                            <span><i class="fa fa-square"></i>1203 sqft</span>
+                        </div>
+                        <div class="details-layer">
+                            <p class="address">1 Regina Udobong <a href="">, Uyo</a></p>
+                        </div>
+                        <div class="details-layer">
+                            <img src="../assets/images/profile/agent3.jpg" alt="Mr. Joe Dohn (agent) profile img"
+                                class="agent-profle-img">
+                            <div>
+                                <a href="profile.html">Mr. John Doe</a>
+                                <p>Selling Agent</p>
+                            </div>
+
+                        </div>
+                        <!-- <div class="listing-menu">
+                                                <a href="">Report fraud</a>
+                                                <a href="">Save property</a>
+                                            </div> -->
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+
+        </footer>
+    </main>
+
+
+
+    <aside class="sidebar">
+        <header>
+            <label for="sidebar-toggle" class="fa fa-caret-left"></label>
+            <span>Welcome Idorenyin!</span>
+        </header>
+        <main>
+            <section>
+                <p>More</p>
+                <nav>
+                    <ul>
+                        <li><a href="search.html"><i class="fas fa-search-plus"></i> <span>Advanced Search</span></a>
+                        </li>
+                        <li><a href="http://www.facebook.com/uelar"><i class="fa fa-group"></i> <span>Uelar
+                                    Community</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section>
+                <p>Categories</p>
+                <nav>
+                    <ul>
+                        <li><a href="listings.html"><i class="fa fa-building"></i> <span>Apartments</span></a></li>
+                        <li><a href="listings.html"><i class="fa fa-home"></i> <span>Homes</span></a></li>
+                        <li><a href="listings.html"><i class="fa fa-laptop"></i> <span>Offices</span></a></li>
+                        <li><a href="listings.html"><i class="fa fa-shield"></i> <span>Self-cons</span></a></li>
+                        <li><a href="listings.html" class="active"><i class="fa fa-shopping-bag"></i>
+                                <span>Shops</span></a></li>
+                        <li><a href="listings.html"><i class="fa fa-graduation-cap"></i> <span>Students
+                                    Accommodation</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section>
+                <p>My activity</p>
+                <nav>
+                    <ul>
+                        <li><a href="activity.html"><i class="fa fa-heart"></i> <span>Favourites</span></a></li>
+                        <li><a href="activity.html"><i class="fa fa-archive"></i> <span>Saved</span></a></li>
+                        <li><a href="user.html"><i class="fa fa-user"></i> <span>My Profile</span></a></li>
+                        <li><a href="account.html"><i class="fa fa-cog"></i> <span>Account Settings</span></a></li>
+                        <li><a href="admin/index.html"><i class="fa fa-dashboard"></i> <span>My admin</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section>
+                <p>Settings</p>
+                <div class="theme-toggle-cont">
+                    <div class="toggle-body">
+                        <label for="theme2" class="fa fa-toggle-off theme-toggle1">
+                            <input type="radio" name="theme" id="theme1" checked>
+                            <span>Light Theme</span>
+                        </label>
+                        <label for="theme1" class="fa fa-toggle-on theme-toggle2">
+                            <input type="radio" name="theme" id="theme2">
+                            <span>Dark Theme</span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section>
+                <p>Uelar</p>
+                <nav>
+                    <ul>
+                        <li><a href="about.html"><i class="fa fa-info-circle"></i> <span>About Us</span></a></li>
+                        <li><a href="contact.html"><i class="fa fa-phone"></i> <span>Contact Us</span></a></li>
+                    </ul>
+                </nav>
+            </section>
+        </main>
+    </aside>
+    <aside class="searchBar">
+        <header>
+            <form action="search.php" method="get" autocomplete="off" class="searchForm">
+                <button type="submit" class="fas fa-search-location"></button>
+                <input type="search" name="local-govt_area" value="Uyo">
+            </form>
+            <label for="searchbar-toggle"><i class="fas fa-times"></i></label>
+        </header>
+        <main>
+            <!-- <section>
+                <span class="search-value"><i class="fas fa-cloud"></i> Uyo:</span>
+                <span class="loc-found">7 locations found</span>
+                <span class="total-avail-prop">207 available properties</span>
+            </section> -->
+            <section>
+                <ul>
+                    <p>Results</p>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">La</span>
+                            </div>
+                            <div>
+                                <span class="lga">Lagos Island</span>
+                                <span class="state">Lagos State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>13</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">en</span>
+                            </div>
+                            <div>
+                                <span class="lga">Enugu</span>
+                                <span class="state">Enugu State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>4</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">AK</span>
+                            </div>
+                            <div>
+                                <span class="lga">Uyo</span>
+                                <span class="state">Akwa Ibom State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>6</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">La</span>
+                            </div>
+                            <div>
+                                <span class="lga">Lagos Island</span>
+                                <span class="state">Lagos State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>13</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">en</span>
+                            </div>
+                            <div>
+                                <span class="lga">Enugu</span>
+                                <span class="state">Enugu State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>3</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">AK</span>
+                            </div>
+                            <div>
+                                <span class="lga">Uyo</span>
+                                <span class="state">Akwa Ibom State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>5</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">La</span>
+                            </div>
+                            <div>
+                                <span class="lga">Epe</span>
+                                <span class="state">Lagos State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>7</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">Ak</span>
+                            </div>
+                            <div>
+                                <span class="lga">Ikot Abasi</span>
+                                <span class="state">Akwa Ibom State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>2</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">Ri</span>
+                            </div>
+                            <div>
+                                <span class="lga">Port Harcourt</span>
+                                <span class="state">Rivers State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>8</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <div>
+                                <span class="first-letters">Cr</span>
+                            </div>
+                            <div>
+                                <span class="lga">Calabar</span>
+                                <span class="state">Cross River State</span>
+                            </div>
+                            <div>
+                                <span class="num-of-prop">
+                                    <span>4</span>
+                                    <span>properties</span>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <p><a href="">Not satisfied? Try advanced search</a></p>
+            </section>
+        </main>
+    </aside>
+</body>
+
+<script src="js/gen.js"></script>
+<script src="js/cover.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/sideBar.js"></script>
+<script src="js/searchBar.js"></script>
+<script src="js/listings.js"></script>
+
+</html>
